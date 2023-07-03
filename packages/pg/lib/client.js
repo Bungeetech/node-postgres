@@ -317,28 +317,36 @@ class Client extends EventEmitter {
   // if we receieve an error event or error message
   // during the connection process we handle it here
   _handleErrorWhileConnecting(err) {
-    if (this._connectionError) {
-      // TODO(bmc): this is swallowing errors - we shouldn't do this
-      return
+    try {
+      if (this._connectionError) {
+        // TODO(bmc): this is swallowing errors - we shouldn't do this
+        return
+      }
+      this._connectionError = true
+      clearTimeout(this.connectionTimeoutHandle)
+      if (this._connectionCallback) {
+        return this._connectionCallback(err)
+      }
+      this.emit('error', err)      
+    } catch (error) {
+      console.error(error);
     }
-    this._connectionError = true
-    clearTimeout(this.connectionTimeoutHandle)
-    if (this._connectionCallback) {
-      return this._connectionCallback(err)
-    }
-    this.emit('error', err)
   }
 
   // if we're connected and we receive an error event from the connection
   // this means the socket is dead - do a hard abort of all queries and emit
   // the socket error on the client as well
   _handleErrorEvent(err) {
-    if (this._connecting) {
-      return this._handleErrorWhileConnecting(err)
+    try {
+      if (this._connecting) {
+        return this._handleErrorWhileConnecting(err)
+      }
+      this._queryable = false
+      this._errorAllQueries(err)
+      this.emit('error', err)      
+    } catch (error) {
+      console.error(error);
     }
-    this._queryable = false
-    this._errorAllQueries(err)
-    this.emit('error', err)
   }
 
   // handle error messages from the postgres backend
