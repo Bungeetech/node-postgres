@@ -1218,6 +1218,23 @@
   "resolved" "https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz"
   "version" "2.4.0"
 
+"@types/pg-cursor@^2.7.0":
+  "integrity" "sha512-4Milg/OUqTO2VuPvvRwPxaQTaiVb+bXvSK+ZCwiHjwinbD4/lPqV9AREg8sJAT0cy5ruY38aaajBc2FbdPaKcA=="
+  "resolved" "https://registry.npmjs.org/@types/pg-cursor/-/pg-cursor-2.7.0.tgz"
+  "version" "2.7.0"
+  dependencies:
+    "@types/node" "*"
+    "@types/pg" "*"
+
+"@types/pg@*", "@types/pg@^8.10.2":
+  "integrity" "sha512-MKFs9P6nJ+LAeHLU3V0cODEOgyThJ3OAnmOlsZsxux6sfQs3HRXR5bBn7xG5DjckEFhTAxsXi7k7cd0pCMxpJw=="
+  "resolved" "https://registry.npmjs.org/@types/pg/-/pg-8.10.2.tgz"
+  "version" "8.10.2"
+  dependencies:
+    "@types/node" "*"
+    "pg-protocol" "*"
+    "pg-types" "^4.0.1"
+
 "@types/pg@^7.14.5":
   "integrity" "sha512-EnZkZ1OMw9DvNfQkn2MTJrwKmhJYDEs5ujWrPfvseWNoI95N8B4HzU/Ltrq5ZfYxDX/Zg8mTzwr6UAyTjjFvXA=="
   "resolved" "https://registry.npmjs.org/@types/pg/-/pg-7.14.11.tgz"
@@ -1226,15 +1243,6 @@
     "@types/node" "*"
     "pg-protocol" "^1.2.0"
     "pg-types" "^2.2.0"
-
-"@types/pg@^8.10.2":
-  "integrity" "sha512-MKFs9P6nJ+LAeHLU3V0cODEOgyThJ3OAnmOlsZsxux6sfQs3HRXR5bBn7xG5DjckEFhTAxsXi7k7cd0pCMxpJw=="
-  "resolved" "https://registry.npmjs.org/@types/pg/-/pg-8.10.2.tgz"
-  "version" "8.10.2"
-  dependencies:
-    "@types/node" "*"
-    "pg-protocol" "*"
-    "pg-types" "^4.0.1"
 
 "@types/stack-trace@0.0.29":
   "integrity" "sha512-TgfOX+mGY/NyNxJLIbDWrO9DjGoVSW9+aB8H2yy1fy32jsvxijhmyJI9fDFgvz3YP4lvJaq9DzdR/M1bOgVc9g=="
