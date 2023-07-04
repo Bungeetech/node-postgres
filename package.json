@@ -1,9 +1,16 @@
 {
-  "name": "node-postgres",
+  "name": "@bungeetech-npm/node-postgres",
+  "version": "0.0.1",
   "description": "node postgres monorepo",
   "main": "index.js",
-  "private": true,
-  "repository": "git@github.com:brianc/node-postgres.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bungeetech/node-postgres.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bungeetech/node-postgres/issues"
+  },
+  "homepage": "https://github.com/Bungeetech/node-postgres#readme",
   "author": "Brian M. Carlson <brian.m.carlson@gmail.com>",
   "license": "MIT",
   "workspaces": [
