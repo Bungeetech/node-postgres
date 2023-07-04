@@ -1,6 +1,6 @@
 {
   "name": "@bungeetech-npm/node-postgres",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "node postgres monorepo",
   "main": "index.js",
   "repository": {
