@@ -17,14 +17,7 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "yarn lerna exec yarn test",
-    "build": "tsc --build",
-    "build:watch": "tsc --build --watch",
-    "docs:build": "cd docs && yarn build",
-    "docs:start": "cd docs && yarn start",
-    "pretest": "yarn build",
-    "prepublish": "yarn build",
-    "lint": "eslint '*/**/*.{js,ts,tsx}'"
+
   },
   "devDependencies": {
     "@types/chai": "^4.3.5",
