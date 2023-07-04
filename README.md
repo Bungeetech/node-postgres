@@ -1,29 +1,20 @@
 # node-postgres
 
-![Build Status](https://github.com/brianc/node-postgres/actions/workflows/ci.yml/badge.svg)
+[![Build Status](https://secure.travis-ci.org/brianc/node-postgres.svg?branch=master)](http://travis-ci.org/brianc/node-postgres)
 <span class="badge-npmversion"><a href="https://npmjs.org/package/pg" title="View this project on NPM"><img src="https://img.shields.io/npm/v/pg.svg" alt="NPM version" /></a></span>
 <span class="badge-npmdownloads"><a href="https://npmjs.org/package/pg" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/pg.svg" alt="NPM downloads" /></a></span>
 
 Non-blocking PostgreSQL client for Node.js. Pure JavaScript and optional native libpq bindings.
 
-## Monorepo
+## Install
 
-This repo is a monorepo which contains the core [pg](https://github.com/brianc/node-postgres/tree/master/packages/pg) module as well as a handful of related modules.
+```sh
+$ npm install pg
+```
 
-- [pg](https://github.com/brianc/node-postgres/tree/master/packages/pg)
-- [pg-pool](https://github.com/brianc/node-postgres/tree/master/packages/pg-pool)
-- [pg-cursor](https://github.com/brianc/node-postgres/tree/master/packages/pg-cursor)
-- [pg-query-stream](https://github.com/brianc/node-postgres/tree/master/packages/pg-query-stream)
-- [pg-connection-string](https://github.com/brianc/node-postgres/tree/master/packages/pg-connection-string)
-- [pg-protocol](https://github.com/brianc/node-postgres/tree/master/packages/pg-protocol)
+---
 
-## Documentation
-
-Each package in this repo should have its own readme more focused on how to develop/contribute. For overall documentation on the project and the related modules managed by this repo please see:
-
-### :star: [Documentation](https://node-postgres.com) :star:
-
-The source repo for the documentation is available for contribution [here](https://github.com/brianc/node-postgres/tree/master/docs).
+## :star: [Documentation](https://node-postgres.com) :star:
 
 ### Features
 
@@ -55,7 +46,7 @@ You can also follow me [@briancarlson](https://twitter.com/briancarlson) if that
 
 ## Sponsorship :two_hearts:
 
-node-postgres's continued development has been made possible in part by generous financial support from [the community](https://github.com/brianc/node-postgres/blob/master/SPONSORS.md).
+node-postgres's continued development has been made possible in part by generous finanical support from [the community](https://github.com/brianc/node-postgres/blob/master/SPONSORS.md).
 
 If you or your company are benefiting from node-postgres and would like to help keep the project financially sustainable [please consider supporting](https://github.com/sponsors/brianc) its development.
 
@@ -69,15 +60,7 @@ I will **happily** accept your pull request if it:
 - looks reasonable
 - does not break backwards compatibility
 
-If your change involves breaking backwards compatibility please please point that out in the pull request & we can discuss & plan when and how to release it and what type of documentation or communication it will require.
-
-### Setting up for local development
-
-1. Clone the repo
-2. From your workspace root run `yarn` and then `yarn lerna bootstrap`
-3. Ensure you have a PostgreSQL instance running with SSL enabled and an empty database for tests
-4. Ensure you have the proper environment variables configured for connecting to the instance
-5. Run `yarn test` to run all the tests
+If your change involves breaking backwards compatibility please please point that out in the pull request & we can discuss & plan when and how to release it and what type of documentation or communicate it will require.
 
 ## Troubleshooting and FAQ
 
